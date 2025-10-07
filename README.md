@@ -2,6 +2,8 @@
 
 月々の副業収入を投資に回した場合の将来の資産額をシミュレーションするWebアプリです。
 
+🔗 **デモサイト**: https://iidaatcnt.github.io/tsumitate-simulator/
+
 ## 特徴
 
 - 🎯 シンプルな操作で即座に計算結果を確認
@@ -44,6 +46,20 @@ npm run preview
 - TypeScript
 - Vite
 - Tailwind CSS
+
+## デプロイ
+
+このプロジェクトはGitHub Pagesに自動デプロイされます。
+
+mainブランチにプッシュすると、GitHub Actionsが自動的にビルドしてデプロイします。
+
+### 初回のみ: GitHub Pagesの設定
+
+1. GitHubリポジトリの **Settings** → **Pages** に移動
+2. **Source** を **GitHub Actions** に変更
+3. 変更を保存
+
+設定後、mainブランチへのプッシュで自動的にデプロイされます。
 
 ## 計算式
 
