@@ -22,6 +22,7 @@ const elements = {
 
     // 結果表示要素
     endDate: document.getElementById('endDate'),
+    resultDescription: document.getElementById('resultDescription'),
     finalAmount: document.getElementById('finalAmount'),
     principal: document.getElementById('principal'),
     profit: document.getElementById('profit'),
@@ -62,6 +63,14 @@ function updateDisplay() {
 
     // 結果を表示
     elements.endDate.textContent = `${result.endYear}年${result.endMonth}月`;
+
+    // 説明文を動的に生成
+    const monthlyAmountText = inputs.monthlyAmount >= 10000
+        ? `${inputs.monthlyAmount / 10000}万円`
+        : `${formatCurrency(inputs.monthlyAmount)}円`;
+    elements.resultDescription.textContent =
+        `月${monthlyAmountText}を優良なインデックスファンド（年利${inputs.annualRate}%）に${inputs.years}年間投資した結果のシミュレーション`;
+
     elements.finalAmount.textContent = formatCurrency(result.finalAmount);
     elements.principal.textContent = formatCurrency(result.principal) + '円';
     elements.profit.textContent =
