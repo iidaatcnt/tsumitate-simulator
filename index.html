@@ -1,13 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>副業収入投資シミュレーター</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー -->
+        <header class="header">
+            <h1 class="title">💰 副業収入投資シミュレーター</h1>
+            <p class="subtitle">月5万円の副業を投資に回したら...?</p>
+        </header>
+
+        <!-- メインコンテンツ -->
+        <main class="main-card">
+            <!-- 入力セクション -->
+            <section class="input-section">
+                <!-- 開始日 -->
+                <div class="form-group">
+                    <label class="form-label">開始日</label>
+                    <div class="date-input-group">
+                        <input type="number" id="startYear" class="input-small" min="2020" max="2100" value="2025">
+                        <span class="input-unit">年</span>
+                        <input type="number" id="startMonth" class="input-small" min="1" max="12" value="10">
+                        <span class="input-unit">月</span>
+                    </div>
+                </div>
+
+                <!-- 毎月の投資額 -->
+                <div class="form-group">
+                    <label for="monthlyAmount" class="form-label">毎月の投資額</label>
+                    <div class="input-with-unit">
+                        <input type="number" id="monthlyAmount" class="input-large" min="0" step="1000" value="50000">
+                        <span class="input-unit">円</span>
+                    </div>
+                </div>
+
+                <!-- 投資期間 -->
+                <div class="form-group">
+                    <label for="years" class="form-label">
+                        投資期間: <span id="yearsValue" class="value-display">20</span>年
+                    </label>
+                    <input type="range" id="years" class="slider" min="1" max="50" value="20">
+                    <div class="slider-labels">
+                        <span>1年</span>
+                        <span>50年</span>
+                    </div>
+                </div>
+
+                <!-- 想定利回り -->
+                <div class="form-group">
+                    <label for="annualRate" class="form-label">
+                        想定利回り: <span id="annualRateValue" class="value-display">7</span>%（年率）
+                    </label>
+                    <input type="range" id="annualRate" class="slider" min="0" max="20" step="0.5" value="7">
+                    <div class="slider-labels">
+                        <span>0%</span>
+                        <span>20%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 結果表示セクション -->
+            <section class="result-section">
+                <h2 class="result-title">
+                    📊 <span id="endDate">2045年10月</span>の資産額
+                </h2>
+
+                <div class="result-main">
+                    <div class="result-amount" id="finalAmount">26,046,333</div>
+                    <span class="result-unit">円</span>
+                </div>
+
+                <div class="result-details">
+                    <div class="detail-item">
+                        <span class="detail-label">投資した元本:</span>
+                        <span class="detail-value" id="principal">12,000,000円</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">運用で増えた額:</span>
+                        <span class="detail-value profit" id="profit">14,046,333円 (+117%)</span>
+                    </div>
+                </div>
+
+                <div class="comparison-box">
+                    <div class="comparison-content">
+                        <span class="comparison-icon">💡</span>
+                        <div class="comparison-text">
+                            <p class="comparison-line">
+                                貯金だけなら: <span class="comparison-value" id="savingsOnly">12,000,000円</span>
+                            </p>
+                            <p class="comparison-line highlight">
+                                差額: <span id="difference">+14,046,333円</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 注意事項 -->
+            <footer class="notice">
+                <p>※ この計算はシミュレーションです。実際の運用結果を保証するものではありません。</p>
+                <p>※ 投資には元本割れのリスクがあります。</p>
+                <p>※ 税金や手数料は考慮されていません。</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="js/calculator.js"></script>
+    <script src="js/app.js"></script>
+</body>
 </html>

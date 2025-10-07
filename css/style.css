@@ -1,0 +1,288 @@
+/* リセットとベース設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(to bottom right, #f0fdf4, #eff6ff);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+/* コンテナ */
+.container {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+/* ヘッダー */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: #4b5563;
+}
+
+/* メインカード */
+.main-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+/* 入力セクション */
+.input-section {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.value-display {
+    font-weight: bold;
+    color: #059669;
+}
+
+/* 日付入力 */
+.date-input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input-small {
+    width: 6rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.input-small:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* 金額入力 */
+.input-with-unit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input-large {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.input-large:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.input-unit {
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+/* スライダー */
+.slider {
+    width: 100%;
+    height: 0.5rem;
+    background: #e5e7eb;
+    border-radius: 0.5rem;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: #10b981;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: #10b981;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* 結果セクション */
+.result-section {
+    background: linear-gradient(to bottom right, #fef2f2, #fff7ed);
+    border: 2px solid #fca5a5;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.result-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.result-main {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.result-amount {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #dc2626;
+}
+
+.result-unit {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+/* 結果詳細 */
+.result-details {
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.detail-label {
+    color: #374151;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.detail-value.profit {
+    color: #059669;
+}
+
+/* 比較ボックス */
+.comparison-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.comparison-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.comparison-icon {
+    font-size: 1.5rem;
+}
+
+.comparison-text {
+    flex: 1;
+}
+
+.comparison-line {
+    font-size: 0.875rem;
+    color: #374151;
+    margin-bottom: 0.25rem;
+}
+
+.comparison-line.highlight {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.comparison-value {
+    font-weight: 600;
+}
+
+/* 注意事項 */
+.notice {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.notice p {
+    margin-bottom: 0.25rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 640px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .main-card {
+        padding: 1.5rem;
+    }
+
+    .result-amount {
+        font-size: 2rem;
+    }
+
+    .result-unit {
+        font-size: 1.25rem;
+    }
+}
